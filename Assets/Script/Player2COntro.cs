@@ -86,13 +86,12 @@ public class Player2COntro : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.X))
         {
-            estado = 3;
+            estado = 4;
             animator.SetInteger("Estado",estado);
             contadorSegundos += Time.deltaTime;
         }
         if (Input.GetKeyUp(KeyCode.X))
         {
-            estado = 3;
             animator.SetInteger("Estado", 0);
 
             contadorSegundos += Time.deltaTime;
@@ -113,7 +112,7 @@ public class Player2COntro : MonoBehaviour
         {
             var tim = contadorSegundos2 += Time.deltaTime;
             TimeT.text = tim.ToString(CultureInfo.InvariantCulture);
-            if (tim > 50.0)
+            if (tim > 15.0)
             {
                 SceneManager.LoadScene("SampleScene2");
                 timeC = false;

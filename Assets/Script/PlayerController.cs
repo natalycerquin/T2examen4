@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         estado = 0;
+        animator.SetInteger("Estado", estado);
         speed = 0.0f;
         if (Input.GetKey(KeyCode.RightArrow))
         {
@@ -78,7 +79,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.X))
         {
-            estado = 3;
+            estado = 4;
             animator.SetInteger("Estado",estado);
             contadorSegundos += Time.deltaTime;
         }
